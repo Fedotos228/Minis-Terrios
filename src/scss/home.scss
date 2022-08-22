@@ -1,0 +1,22 @@
+.hero {
+    height: 83vh;
+    &__container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        @include adaptiv-value('gap', 80, 20, 1);
+        height: 100%;
+    }
+    &__buttons {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+}
+
+.about {
+    .subtitle-quote {
+        max-width: 795px;
+    }
+}

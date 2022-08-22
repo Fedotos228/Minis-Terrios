@@ -1,0 +1,65 @@
+.header {
+    padding: 20px 0;
+    background-color: #fff;
+    &.sticky {
+        position: fixed;
+        width: 100%;
+        left: 0;
+        top: 0;
+        right: 0;
+        animation: fixedHeader 0.4s;
+        z-index: 5;
+    }
+    &__container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__nav {
+        display: flex;
+        align-items: center;
+        @include adaptiv-value('gap', 80, 20, 1);
+        li {
+            position: relative;
+            a {
+                text-transform: uppercase;
+            }
+            &.language {
+                a {
+                    font-weight: 700;
+                }
+                &::after {
+                    content: none;
+                }
+            }
+            &::after {
+                position: absolute;
+                content: '';
+                width: 100%;
+                height: 1px;
+                background-color: $maincolor;
+                left: 0;
+                bottom: 0;
+                opacity: 0;
+                visibility: hidden;
+                transition: .3s;
+            }
+            &:hover {
+                &::after {
+                    bottom: -3px;
+                    opacity: 1;
+                    visibility: visible;
+                }
+            }
+        }
+    }
+}
+
+@keyframes fixedHeader {
+    from {
+        transform: translateY(-50px);
+    }
+    to {
+        transform: translateY(0);
+    }
+}

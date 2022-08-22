@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('./components/head.html', {'title': 'Home | Minis Terrios'})
+
+<body>
+    @@include('./components/header.html')
+    <main>
+        <section class="hero" style="background: url(@img/hero.jpg)">
+            <div class="hero__container">
+                <h1>Born in Moldova to inspire the whole world</h1>
+                <div class="hero__buttons">
+                    <button class="button button__primary--gray">Our wines</button>
+                    <button class="button button__primary--beige">Our story</button>
+                </div>
+            </div>
+        </section>
+        <section class="about">
+            <div class="about__container">
+                <small>About Us</small>
+                <p class="subtitle-quote">
+                    MINIS TERRIOS is a winery that appeared in 2013. Its creators, Dan and Diana Prisacaru, studied winemaking in Burgundy. The winery has not big assortment, but author's wines. They produce about 10 thousand bottles per year, but these wines deserve attention.
+                </p>
+
+            </div>
+        </section>
+    </main>
+    @@include('./components/footer.html')
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.0.7/swiper-bundle.min.js" integrity="sha512-WlN87oHzYKO5YOmINf1+pSkbt4gm+lOro4fiSTCjII4ykJe/ycHKIaa9b2l9OMkbqEA4NxwTXAGFjSXgqEh19w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="js/app.min.js"></script>
+</body>
+
+</html>
